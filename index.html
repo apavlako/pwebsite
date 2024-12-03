@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolioCSS.css"> 
+</head>
+<body>
+    <div class="title" id="title">Portfolio</div>
+
+    <div class="scroll-indicator">
+        <p>Scroll</p>
+        <img src="C:\Users\alexa\OneDrive\dev\pwebsite\transparentarrow.png" alt="Arrow pointing down" class="arrow-icon">
+    </div>    
+
+    <div id="particles-js"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        particlesJS("particles-js", {
+          particles: {
+            number: {
+              value: 75,
+              density: {
+                enable: true,
+                value_area: 800
+              }
+            },
+            color: {
+              value: ["#800000", "#B80F0A", "#CD5C5C"]
+            },
+            shape: {
+              type: "circle",
+              stroke: {
+                width: 0,
+                color: "#000000"
+              }
+            },
+            opacity: {
+              value: 0.7,
+              random: true
+            },
+            size: {
+              value: 4,
+              random: true
+            },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#800000",
+              opacity: 0.4,
+              width: 1
+            },
+            move: {
+              enable: true,
+              speed: 2,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false
+            }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse"
+              },
+              onclick: {
+                enable: true,
+                mode: "push"
+              }
+            },
+            modes: {
+              repulse: {
+                distance: 100,
+                duration: 0.4
+              },
+              push: {
+                particles_nb: 4
+              }
+            }
+          },
+          retina_detect: true
+        });
+      </script>
+
+    <div class="about-me" id="aboutMe">
+        <div class="about-me-content">
+            <img src="C:\Users\alexa\OneDrive\Pictures\linkedinprofile1.jpg" alt="Picture of Alexa Pavlakos" class="profile-picture">
+            <div class="bio">
+                <h2>About Me</h2>
+                <p>Hi, I'm Alexa Pavlakos, a passionate student of finance and business analytics with a minor in data science. I am currently exploring opportunities in quantitative trading and looking forward to creating innovative solutions in the finance industry. Welcome to my portfolio!</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slideshow-container" id="slideshow">
+
+        <div class="slide fade">
+          <a href="C:\Users\alexa\OneDrive\dev\pwebsite\Abbott Case Competition Presentation Slides.pdf" target="_blank">
+            <img src="C:\Users\alexa\OneDrive\dev\pwebsite\Picture- Abbott.jpg" alt="Project 1" class="slide-image">
+          </a>
+        </div>
+
+        <div class="slide fade">
+          <a href="project2.pdf" target="_blank">
+            <img src="project2.jpg" alt="Project 2" class="slide-image">
+          </a>
+        </div>
+
+        <div class="slide fade">
+          <a href="project3.pdf" target="_blank">
+            <img src="project3.jpg" alt="Project 3" class="slide-image">
+          </a>
+        </div>
+
+        <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlides(1)">&#10095;</a>
+      </div>
+      
+    <script src= "portfolioJS.js"></script>
+
+</body>
+</html>
