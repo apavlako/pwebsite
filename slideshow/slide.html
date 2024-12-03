@@ -7,23 +7,38 @@
     <link rel="stylesheet" href="slide.css">
 </head>
 <body>
-    <div class="slideshow-container">
-        <div class="slide left">
-            <img src="images/slide1.jpg" alt="Slide 1">
-            <div class="caption">Project 1: Stock Portfolio Optimization</div>
+
+    <!-- Slide 1: First Project -->
+    <div class="split-container">
+        <div class="left">
+            <img src="image1.jpg" alt="Image 1" class="slide-image">
         </div>
-        <div class="slide right">
-            <img src="images/slide2.jpg" alt="Slide 2">
-            <div class="caption">Project 2: Credit Risk Modeling</div>
+        <div class="right">
+            <div class="caption">
+                <h2>Project 1: Stock Portfolio Optimization</h2>
+                <p>Description of the project goes here.</p>
+            </div>
         </div>
-        <div class="slide left">
-            <img src="images/slide3.jpg" alt="Slide 3">
-            <div class="caption">Project 3: Health Technology Analysis</div>
-        </div>
-        <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
-        <a class="next" onclick="moveSlides(1)">&#10095;</a>
     </div>
 
-    <script src="slide.js" defer></script>
+    <!-- Slide 2: Second Project -->
+    <div class="split-container">
+        <div class="left">
+            <img src="image2.jpg" alt="Image 2" class="slide-image">
+        </div>
+        <div class="right">
+            <div class="caption">
+                <h2>Project 2: Machine Learning for Financial Analysis</h2>
+                <p>Description of the second project goes here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arrows to switch slides -->
+    <button class="arrow-left">&#10094;</button>
+    <button class="arrow-right">&#10095;</button>
+
+    <script src="slide.js"></script>
+
 </body>
 </html>

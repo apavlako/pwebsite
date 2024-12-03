@@ -1,84 +1,82 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-.slideshow-container {
-    position: relative;
+/* Main container for the split screen */
+.split-container {
+    display: flex;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
 }
 
-.slide {
-    position: absolute;
+/* Left side with the image */
+.left {
     width: 50%;
     height: 100%;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-    opacity: 0;
 }
 
-.slide img {
+.left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.slide.left {
-    left: 0;
-    transform: translateX(-100%);
-}
-
-.slide.right {
-    right: 0;
-    transform: translateX(100%);
-}
-
-.slide.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.caption {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+/* Right side for text (caption) */
+.right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    background-color: #8B0000; /* Burgundy background */
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.2em;
+    position: relative;
 }
 
-/* Navigation Arrows */
-.prev, .next {
+/* Caption styling */
+.caption {
+    text-align: center;
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: 80%;
+    transition: all 1s ease;
+    transform: translateY(0); /* Initially no movement */
+    opacity: 1;
+}
+
+/* Fade caption upwards */
+.caption-up {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* Fade caption downwards */
+.caption-down {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+/* Arrows for slide navigation */
+.arrow-left, .arrow-right {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    font-size: 30px;
     color: white;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 50%;
-    user-select: none;
-    z-index: 10;
+    cursor: pointer;
+    z-index: 100;
 }
 
-.prev {
+.arrow-left {
     left: 10px;
 }
 
-.next {
+.arrow-right {
     right: 10px;
 }
 
-.prev:hover, .next:hover {
-    background: rgba(0, 0, 0, 0.8);
+.arrow-left:hover, .arrow-right:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
